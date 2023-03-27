@@ -3,7 +3,7 @@ import Navigation from "./Navigation"
 
 function AddTodo() {
   let [title, setTitle] = useState("")
-  let [description, setDescription] = useState("")
+  let [descrption, setDescription] = useState("")
   let [status, setStatus] = useState("")
   let [priority, setPriority] = useState("")
 
@@ -18,7 +18,7 @@ function AddTodo() {
       },
       body: JSON.stringify({
         title: title,
-        description: description,
+        descrption: descrption,
         status: status,
         priority: priority,
       }),
@@ -30,7 +30,7 @@ function AddTodo() {
       <form onSubmit={handleSubmit} className="form">
         <div className="data">
           <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" name="title" placeholder="Todo Title " required />
-          <input value={description} onChange={(e) => setDescription(e.target.value)} type="text" name="description" placeholder="Description" required />
+          <input value={descrption} onChange={(e) => setDescription(e.target.value)} type="text" name="description" placeholder="Description" required />
           {/* <input value={category} onChange={(e) => setCategory(e.target.value)} type="text" name="category" placeholder="Category" required /> */}
           <input value={priority} onChange={(e) => setPriority(e.target.value)} type="text" name="priority" placeholder="Prority" step="0.01" required />
         </div>
