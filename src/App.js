@@ -1,24 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+
+import './App.css'
+import Login from './components/Login';
+import Display from './components/Display';
+// import Home from './components/Home';
+// import Update from './components/Update';
+
+import {  Switch, Route} from 'react-router-dom';
+import SignUp from './components/Signup';
+import { BrowserRouter as Router } from 'react-router-dom';
+import AddTodo from './components/AddTodo';
+import Navigation from './components/Navigation';
+
+
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+
+    <Router>
+    <div style={{ 
+      backgroundImage: `url("https://raw.githubusercontent.com/Zackazt/MemeCreator/master/src/bg.jpg")` 
+    }} className="App">
+      <h1 className='header'>Todo Creator</h1>
+     
+      <Switch>
+      <Route exact path="/" component={Navigation} />
+      <Route exact path="/register" component={SignUp} />
+      <Route path="/login" component={Login}  />
+      <Route path="/create" component={AddTodo}  />
+      <Route path="/todos" component={Display}  />
+      
+        
+      </Switch>
+   
+    
+   
     </div>
+    </Router>
+
+     
+  
+    
+   
+  
+  
   );
 }
 

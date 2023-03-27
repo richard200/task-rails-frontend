@@ -36,3 +36,83 @@
     transform: rotate(360deg);
   }
 }
+
+
+.header{
+  font-size: 40px;
+  margin-top: auto;
+  color: white;
+ 
+}
+
+input[type=text], select {
+  border-radius: 50px;
+  margin: 10px;
+  background-color: #EFE6B3;
+  padding: 30px;
+  display:inline-block ;
+  margin-top: 20px;
+  width: 700px;
+}
+
+.new-message {
+  border-radius: 50px;
+  margin: 10px;
+  background-color: #EFE6B3;
+  padding: 20px;
+}
+
+.form{
+  display:inline-block ;
+  margin-top: 20px;
+  width: 800px;
+}
+
+input[type=email], select {
+  border-radius: 50px;
+  margin: 10px;
+  background-color: #EFE6B3;
+  padding: 30px;
+  display:inline-block ;
+  margin-top: 20px;
+  width: 700px;
+}
+
+input[type=password], select {
+  border-radius: 50px;
+  margin: 10px;
+  background-color: #EFE6B3;
+  padding: 30px;
+  display:inline-block ;
+  margin-top: 20px;
+  width: 700px;
+}
+
+.main{
+  width: auto;
+}
+
+.top_text{
+  font-size: 25px;
+}
+
+.bottom_text{
+  font-size: 25px;
+}
+
+.fullmeme{
+  font-size: 25px;
+}
+
+nav{
+  color: #EFE6B3; 
+ height: 80px;
+}
+
+.navbar {
+  text-align: center;
+}
+
+.submit-button {
+  font-size: 30px;
+}
