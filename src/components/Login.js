@@ -73,7 +73,7 @@ const Login = ({onLogin}) => {
   return (
 <div className="main">
 <Navigation/>
-  {loggedIn && <Redirect to='https://task-rails.onrender.com/todos/create' />}
+  {loggedIn && <Redirect to='/create' />}
     <form id="form-login" onSubmit={handleLogin}>
       <div className="form-group">
         <i className="input-icon uil uil-at"></i>
