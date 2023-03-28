@@ -3,56 +3,68 @@ import TodoList from "./TodoList";
 import AddTodo from "./AddTodo"
 import Navigation from "./Navigation";
 
-function Todos(todoo) {
-    let [id, Setid] = useState("")
-  let [todo, setTodo] = useState([])
+function Todos() {
+
+  let [todos, setTodos] = useState([])
   let [query, setQuery] = useState("")
+
   useEffect(() => {
     fetch("https://task-rails.onrender.com/todos", {
-        method: "GET",
-        crossorigin: true,
-        mode: "no-cors",
-        headers: {
-            "Content-Type": "application/json"
-          },
+      method: "GET",
+      crossorigin: true,
+      mode: "no-cors",
     })
+   
       .then((resp) => resp.json())
-      .then(todo => setTodo(todo))
+      .then(data => {setTodos(data)
+      })
+
   }, [query])
 
-  function handleDeleteClick(e) {
-    e.preventDefault();
-    fetch(`https://task-rails.onrender.com/todos/delete/${todoo.id}`, {
-      method: "DELETE",
-      headers: {
-        "Content-Type": "application/json",
-      },
-      body: JSON.stringify({
-        id,
+  // function handleDeleteClick(e) {
+  //   e.preventDefault();
+  //   fetch(`https://task-rails.onrender.com/todos/${todoo.id}`, {
+  //     method: "DELETE",
+  //     headers: {
+  //       "Content-Type": "application/json",
+  //     },
+  //     body: JSON.stringify({
+  //       id,
       
-      }),
-    }).then((r) => r.json())
-    .then((data) => {
-     Setid(id)
+  //     }),
+  //   }).then((r) => r.json())
+  //   .then((data) => {
+  //    Setid(id)
    
-    });
+  //   });
 
 
-  }
+  // }
 
 
 
   return (
+    
     <div>
-     <Navigation/>
-      <TodoList todos={todo} />
 
-      <button className="btn btn-danger" onClick={handleDeleteClick}>
-            <span role="img" aria-label="delete">
-            Delete Todo:  🗑
-            </span>
-          </button>
-    </div>
+{/* <span className="sign-up-button">
+    <Link to="/" className="showing-sign">
+        <span className="signing-now">Logout</span>
+
+    </Link>
+
+</span> */}
+<AddTodo/>
+ <TodoList 
+            todos= {todos}
+            // addBot={addBot}
+            // deleteBot={deleteBot}
+ />
+
+
+
+
+ </div>
   );
 }
 

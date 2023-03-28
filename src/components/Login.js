@@ -72,8 +72,8 @@ const Login = ({onLogin}) => {
 
   return (
 <div className="main">
-<Navigation/>
-  {loggedIn && <Redirect to='/create' />}
+{/* <Navigation/> */}
+  {loggedIn && <Redirect to='/todos' />}
     <form id="form-login" onSubmit={handleLogin}>
       <div className="form-group">
         <i className="input-icon uil uil-at"></i>

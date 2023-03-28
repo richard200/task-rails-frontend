@@ -41,7 +41,7 @@ let SignUp = () => {
   };
     return (
       <div className="main">
-<Navigation/>
+{/* <Navigation/> */}
 {registered && <Redirect to='/login' />}
 <form id="form-login" onSubmit={handleLogin}>
 

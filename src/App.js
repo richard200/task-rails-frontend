@@ -18,7 +18,7 @@ function App() {
 
     <Router>
     <div style={{ 
-      backgroundImage: `url("https://raw.githubusercontent.com/Zackazt/MemeCreator/master/src/bg.jpg")` 
+    
     }} className="App">
       <h1 className='header'>Todo Creator</h1>
      

@@ -1,14 +1,16 @@
 import React from "react";
-import Todo from "./Todo";
+import TodoCard from "./TodoCard";
 
 function TodoList({todos}) {
-  let todoList = todos.map((item)=> {
-    return <Todo 
-    key={item.id} 
-    title={item.title} 
-    descrption={item.descrption}
-    status={item.status}
-    priority={item.priority} />;
+  let todoItem= todos.map((todo)=> {
+    return <TodoCard
+    key={todo.id} 
+    todo = {todo}
+    />
+    // title={item.title} 
+    // descrption={item.descrption}
+    // status={item.status}
+    // priority={item.priority} />;
   })
   return (
     <table className="table">
@@ -27,7 +29,7 @@ function TodoList({todos}) {
             <h3 className="priority">Priority</h3>
           </th>
         </tr>
-        {todoList}
+        {todoItem}
       </tbody>
     </table>
   );

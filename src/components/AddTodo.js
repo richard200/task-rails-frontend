@@ -26,7 +26,7 @@ function AddTodo() {
   }
   return (
     <div className="main">
-          <Navigation/>
+          {/* <Navigation/> */}
       <form onSubmit={handleSubmit} className="form">
         <div className="data">
           <input value={title} onChange={(e) => setTitle(e.target.value)} type="text" name="title" placeholder="Todo Title " required />
